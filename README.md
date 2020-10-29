@@ -53,7 +53,7 @@ Several files within this repository enable the correct functioning of our API. 
 
 As described within the Predict instructions for the Regression Sprint, this code represents a *template* from which you can base your own model's API. As such, in order to modify the template to serve your own model (and the associated code changes which are required for this), you will need to **[fork](https://help.github.com/en/github/getting-started-with-github/fork-a-repo)** this repository. Failing to do this will lead to complications when trying to work on the API remotely.
 
-![Fork Repo](assets/imgs/fork_repo.png)  
+![Fork Repo](assets/imgs/fork_repo.PNG)  
 
 To fork the repo, simply ensure that you are logged into your GitHub account, and then click on the 'fork' button at the top of this page as indicated within the figure above.
 
