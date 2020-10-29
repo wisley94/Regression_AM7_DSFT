@@ -73,13 +73,13 @@ To do this, follow the steps below by running the given commands within a Git ba
  2. Clone the *forked* repo to your local machine.
 
  ```bash
- git clone https://github.com/{your-account-name}/regression-predict-api-template.git
+ git clone https://github.com/{your-account-name}/regression-apples-predict-api-template.git
  ```  
 
  3. Navigate to the base of the cloned repo, and run the API web-server initialisation script.
 
  ```bash
- cd regression-predict-api-template/
+ cd regression-apples-predict-api-template/
  python api.py
  ```
 
@@ -100,7 +100,7 @@ Model succesfully loaded
 4. Leave the web server script running within the current bash/terminal session. Open a new session, and navigate to the `utils` subfolder of the cloned repo.
 
 ```
-cd {your/custom/path}/regression-predict-api-template/utils/
+cd {your/custom/path}/regression-apples-predict-api-template/utils/
 ```
 
 5. Run the `request.py` script located within the utils subfolder to simulate a POST request for our running API.
@@ -115,12 +115,12 @@ If you receive an error at this point, please ensure that the web server is stil
 Sending POST request to web server API at: http://127.0.0.1:5000/api_v0.1
 
 Querying API with the following data:
- ['Order_No_21660', 'User_Id_1329', 'Bike', 3, 'Business', 31, 5, '12:16:49 PM', 31, 5, '12:22:48 PM', 31, 5, '12:23:47 PM', 31, 5, '12:38:24 PM', 4, 21.8, nan, -1.2795183, 36.8238089, -1.273056, 36.811298, 'Rider_Id_812', 4402, 1090, 14.3, 1301]
+ [2, 'W.CAPE-BERGRIVER ETC', 'M4183', '1X', 18.3, 'APPLE GOLDEN DELICIOUS', '2020-01-20', 220.0, 220.0, 1760.0, 8, 146.4, 2]
 
 Received POST response:
 **************************************************
-API prediction result: 1547.3014476106036
-The response took: 0.004323 seconds
+API prediction result: 6.606844404839054
+The response took: 0.009711 seconds
 **************************************************
 ```
 
@@ -180,8 +180,8 @@ pip install -U flask numpy pandas scikit-learn
 3. Clone your copy of the API repo onto both the Host and Client machines, then navigate to the base of the cloned repo:
 
 ```bash
-git clone https://github.com/{your-account-name}/regression-predict-api-template.git
-cd regression-predict-api-template/
+git clone https://github.com/{your-account-name}/regression-apples-predict-api-template.git
+cd regression-apples-predict-api-template/
 ```
 **[On the Host]:**
 
@@ -233,12 +233,12 @@ python request.py
 Sending POST request to web server API at: http://54.229.152.221:5000/api_v0.1
 
 Querying API with the following data:
- ['Order_No_21660', 'User_Id_1329', 'Bike', 3, 'Business', 31, 5, '12:16:49 PM', 31, 5, '12:22:48 PM', 31, 5, '12:23:47 PM', 31, 5, '12:38:24 PM', 4, 21.8, nan, -1.2795183, 36.8238089, -1.273056, 36.811298, 'Rider_Id_812', 4402, 1090, 14.3, 1301]
+ [2, 'W.CAPE-BERGRIVER ETC', 'M4183', '1X', 18.3, 'APPLE GOLDEN DELICIOUS', '2020-01-20', 220.0, 220.0, 1760.0, 8, 146.4, 2]
 
 Received POST response:
 **************************************************
-API prediction result: 1547.3014476106036
-The response took: 0.406473 seconds
+API prediction result: 6.606844404839054
+The response took: 0.009711 seconds
 **************************************************
 ```
 
