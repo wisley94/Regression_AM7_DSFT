@@ -65,9 +65,7 @@ def _preprocess_data(data):
     feature_vector_df.Province = [index.replace("-","_") for index in feature_vector_df.Province]
     feature_vector_df.Province = [index.replace(" ","_") for index in feature_vector_df.Province]
     feature_vector_df.Province = [index.replace(".","_") for index in feature_vector_df.Province]
-    feature_vector_df = feature_vector_df.drop(['Date','Commodities'], axis=1)
-    feature_vector_df = pd.get_dummies(feature_vector_df)
-    predict_vector = feature_vector_df.copy()
+    predict_vector = feature_vector_df[['Weight_Kg', 'Low_Price', 'High_Price', 'Sales_Total', 'Total_Qty_Sold']]
                                 
     # ------------------------------------------------------------------------
 
