@@ -62,7 +62,11 @@ def _preprocess_data(data):
     
 
     feature_vector_df = feature_vector_df[(feature_vector_df['Commodities'] == 'APPLE GOLDEN DELICIOUS')]
-    predict_vector = feature_vector_df[['Total_Qty_Sold','Stock_On_Hand']]
+    feature_vector_df.Province = [index.replace("-","_") for index in feature_vector_df.Province]
+    feature_vector_df.Province = [index.replace(" ","_") for index in feature_vector_df.Province]
+    feature_vector_df = feature_vector_df.drop(['Date','Commodities'], axis=1)
+    feature_vector_df = pd.get_dummies(feature_vector_df)
+    predict_vector = feature_vector_df.drop(['avg_price_per_kg'], axis=1)
                                 
     # ------------------------------------------------------------------------
 
